@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+  color: #222;
+  font-family: "PT Serif";
+}
+
+.wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.masonry {
+  column-count: 1;
+  column-gap: 0;
+  padding: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 1200px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+
+@media (min-width: 1500px) {
+  .masonry {
+    column-count: 5;
+  }
+}
+
+@media (min-width: 1800px) {
+  .masonry {
+    column-count: 6;
+  }
+}
+
+.masonry > * {
+  break-inside: avoid;
+  padding: 0.5rem;
+}
+
+.recipe {
+  padding: 1rem;
+  line-height: 1.33;
+  transition: all 0.3s ease-out;
+}
+
+.recipe.is-blurred:not(:hover) {
+  opacity: 0.15;
+}
+
+.recipe h1:not(:last-child),
+.recipe ul:not(:last-child),
+.recipe p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.recipe h1 {
+  font-size: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+
+ul {
+  display: grid;
+  font-weight: bold;
+  grid-column-gap: 0.3em;
+  grid-template-columns: min-content auto;
+  list-style: none;
+  margin-left: 0.5rem;
+}
+
+li {
+  display: contents;
+}
+
+.ingredient-amount {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.ingredient-amount:empty {
+  display: none;
+}
+
+.ingredient-amount:empty + .ingredient-name {
+  grid-column: 1 / -1;
+}
+
+.source {
+  font-style: italic;
+}
