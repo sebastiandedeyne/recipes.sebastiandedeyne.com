@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "build": "next build && next export",
     "format": "prettier \"**/*.{js,json}\" --write --ignore-path .gitignore"
   },
   "dependencies": {
