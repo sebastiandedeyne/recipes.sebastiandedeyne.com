@@ -6,14 +6,15 @@ function parseRecipe(text) {
   const recipe = {
     name: "",
     steps: [],
-    tags: []
+    tags: [],
+    source: null
   };
 
-  return parser.parse().children.reduce((recipe, node) => {
+  parser.parse().children.forEach(node => {
     if (node.type === "heading") {
       recipe.name = extractText(node);
 
-      return recipe;
+      return;
     }
 
     if (node.type === "list") {
@@ -22,18 +23,39 @@ function parseRecipe(text) {
         value: extractIngredients(node)
       });
 
-      return recipe;
+      return;
     }
 
     const text = extractText(node);
 
+    if (text.startsWith("Source:")) {
+      recipe.source = text.substr("Source: ".length);
+
+      return;
+    }
+
+    if (text.startsWith("#")) {
+      text
+        .split(" ")
+        .map(tag => tag.substr(1))
+        .forEach(tag => {
+          recipe.tags.push(tag);
+        });
+
+      return;
+    }
+
     recipe.steps.push({
-      type: text.startsWith("Source:") ? "source" : "text",
+      type: "text",
       value: text
     });
+  });
 
-    return recipe;
-  }, recipe);
+  recipe.searchString = `${recipe.name}_${recipe.tags.join("")}`
+    .replace(/\s/g, "")
+    .toLowerCase();
+
+  return recipe;
 }
 
 function extractText(node) {

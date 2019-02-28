@@ -5,3 +5,5 @@
 - 0.5 oz simple syrup
 - Splash of triple sec
 - 1 egg white
+
+#cocktails

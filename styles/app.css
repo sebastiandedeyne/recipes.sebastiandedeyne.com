@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-html {
-}
-
 body {
   color: #222;
   font-family: "PT Serif";
@@ -55,7 +52,6 @@ body {
 
 .masonry > * {
   break-inside: avoid;
-  padding: 0.5rem;
 }
 
 .recipe {
@@ -64,7 +60,7 @@ body {
   transition: all 0.3s ease-out;
 }
 
-.recipe.is-blurred:not(:hover) {
+.recipe.is-blurred {
   opacity: 0.15;
 }
 
@@ -108,4 +104,14 @@ li {
 
 .source {
   font-style: italic;
+}
+
+.filter {
+  background: #fea;
+  border-radius: 2px;
+  bottom: 1rem;
+  padding: 0.5rem;
+  position: fixed;
+  right: 1rem;
+  font-family: "Menlo", "Monaco", "Consolas", monospace;
 }

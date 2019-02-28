@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Recipes</title>
+          <link rel="icon" type="image/png" href="/static/favicon.png" />
           <link
             href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700"
             rel="stylesheet"
