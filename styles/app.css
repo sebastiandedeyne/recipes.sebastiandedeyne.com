@@ -57,7 +57,7 @@ body {
 .recipe {
   padding: 1rem;
   line-height: 1.33;
-  transition: all 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .recipe.is-blurred {
