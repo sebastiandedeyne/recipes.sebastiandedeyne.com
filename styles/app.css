@@ -107,11 +107,20 @@ li {
 }
 
 .filter {
-  background: #fea;
-  border-radius: 2px;
-  bottom: 1rem;
-  padding: 0.5rem;
-  position: fixed;
-  right: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  border: none;
+  display: flex;
   font-family: "Menlo", "Monaco", "Consolas", monospace;
+  font-size: 1rem;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+}
+
+.filter:focus {
+  outline: none;
 }

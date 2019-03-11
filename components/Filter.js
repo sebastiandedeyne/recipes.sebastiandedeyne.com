@@ -1,29 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export default function Filter({ value, onChange }) {
-  function updateFilterValue(e) {
-    if (e.key === "Escape") {
-      onChange("");
+  const filterEl = useRef(null);
 
-      return;
-    }
-
-    if (e.key === "Backspace") {
-      onChange(value.substr(0, value.length - 1));
-
-      return;
-    }
-
-    if (e.key.match(/^[a-zA-Z]$/)) {
-      onChange(value + e.key);
-    }
+  function handleKeyDown(e) {
+    filterEl.current.focus();
   }
 
   useEffect(() => {
-    window.addEventListener("keydown", updateFilterValue);
+    window.addEventListener("keydown", handleKeyDown);
 
-    return () => window.removeEventListener("keydown", updateFilterValue);
-  }, [updateFilterValue]);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  });
 
-  return value && <p className="filter">{value}</p>;
+  return (
+    <input
+      ref={filterEl}
+      className="filter"
+      type="search"
+      value={value}
+      onChange={e => onChange(e.target.value)}
+      placeholder="Search..."
+    />
+  );
 }

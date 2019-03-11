@@ -1,9 +1,6 @@
-export default function Recipe({ name, steps, source, blurred, onClick }) {
+export default function Recipe({ name, steps, source }) {
   return (
-    <article
-      className={`recipe ${blurred ? "is-blurred" : ""}`}
-      onClick={onClick}
-    >
+    <article className="recipe">
       <h1>{name}</h1>
       {steps.map((step, i) => (
         <Step key={i} {...step} />
