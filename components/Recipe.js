@@ -2,9 +2,13 @@ export default function Recipe({ name, steps, source }) {
   return (
     <article className="recipe">
       <h1>{name}</h1>
-      {steps.map((step, i) => (
-        <Step key={i} {...step} />
-      ))}
+      <ol>
+        {steps.map((step, i) => (
+          <li key={i}>
+            <Step {...step} />
+          </li>
+        ))}
+      </ol>
       {source && <p className="source">From {source}</p>}
     </article>
   );
