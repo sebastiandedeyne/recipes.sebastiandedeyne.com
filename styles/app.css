@@ -11,13 +11,12 @@ body {
 
 .wrapper {
   max-width: 2000px;
-  margin: 0 auto;
+  margin: -0.5rem auto 0;
 }
 
 .masonry {
   column-count: 1;
   column-gap: 0;
-  padding: 0.5rem;
 }
 
 @media (min-width: 600px) {
@@ -109,16 +108,12 @@ li {
 .filter {
   appearance: none;
   -webkit-appearance: none;
-  align-items: center;
-  bottom: 0;
-  right: 0;
   border: none;
-  display: flex;
-  font-family: "Menlo", "Monaco", "Consolas", monospace;
   font-size: 1rem;
+  font-family: "Menlo", "Monaco", "Consolas", monospace;
   padding: 1rem;
-  position: fixed;
   width: 100%;
+  display: block;
 }
 
 .filter:focus {

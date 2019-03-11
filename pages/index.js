@@ -20,11 +20,11 @@ export default function Index() {
       <Head>
         <title>Recipes</title>
       </Head>
+      <Filter value={filter} onChange={updateFilter} />
       <main className="wrapper masonry">
         {recipes.map(recipe => (
           <Recipe key={recipe.name} {...recipe} />
         ))}
-        <Filter value={filter} onChange={updateFilter} />
       </main>
     </>
   );
