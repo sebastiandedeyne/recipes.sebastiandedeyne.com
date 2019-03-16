@@ -98,6 +98,14 @@ li {
   text-align: right;
 }
 
+.ingredient-amount:empty {
+  display: none;
+}
+
+.ingredient-amount:empty + .ingredient-name {
+  grid-column: 1 / -1;
+}
+
 .source {
   font-style: italic;
 }

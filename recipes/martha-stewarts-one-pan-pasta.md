@@ -1,7 +1,7 @@
 # Martha Stewart's One-Pan Pasta
 
-- 12 oz linguine
-- 12 oz cherry or grape tomatoes, halved or quartered if large
+- 340 g linguine
+- 340 g cherry or grape tomatoes, halved or quartered if large
 - 1 onion, thinly sliced (about 2 cups)
 - 4 cloves of garlic, thinly sliced
 - 1/2 tsp red pepper flakes

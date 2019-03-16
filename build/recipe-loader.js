@@ -1,3 +1,4 @@
+const _ = require("lodash");
 const markdown = require("remark-parse");
 
 function parseRecipe(text) {
@@ -51,7 +52,7 @@ function parseRecipe(text) {
     });
   });
 
-  recipe.searchString = `${recipe.name}_${recipe.tags.join("")}`
+  recipe.searchString = _.deburr(`${recipe.name}_${recipe.tags.join("")}`)
     .replace(/\s/g, "")
     .toLowerCase();
 
@@ -75,8 +76,8 @@ function extractIngredients(node) {
 function parseIngredient(ingredient) {
   // prettier-ignore
   const units = [
-    "ball", "balls", "cup", "cups", "g", "gram", "grams", "l", "ml", "oz",
-    "tbsp", "tsp"
+    "ball", "balls", "can", "cans", "cup", "cups", "g", "gram", "grams", "l",
+    "ml", "oz", "tbsp", "tsp"
   ];
 
   const parts = ingredient.split(

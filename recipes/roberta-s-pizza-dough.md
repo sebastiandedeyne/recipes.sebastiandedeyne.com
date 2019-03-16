@@ -2,13 +2,13 @@
 
 - 1 cup + 1 tbsp "00" flour
 - 1 cup + 2 tbsp all-purpose flour
-- 1tsp fine sea salt
+- 1 tsp fine sea salt
 
 In a large mixing bowl, combine flours and salt.
 
 - 200 g lukewarm tap water
 - 3/4 tsp active dry yeast
-- 1tsp extra-virgin olive oil
+- 1 tsp extra-virgin olive oil
 
 In a small mixing bowl, stir together lukewarm tap water, the yeast and the olive oil, then pour it into flour mixture.
 
