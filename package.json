@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
-    "format": "prettier \"**/*.{js,json}\" --write --ignore-path .gitignore"
+    "format": "prettier \"**/*.{js,json}\" --write --ignore-path .gitignore",
+    "make:recipe": "node console make:recipe"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
