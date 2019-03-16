@@ -20,7 +20,7 @@ function parseRecipe(text) {
     if (node.type === "list") {
       recipe.steps.push({
         type: "ingredients",
-        value: extractIngredients(node)
+        contents: extractIngredients(node)
       });
 
       return;
@@ -47,7 +47,7 @@ function parseRecipe(text) {
 
     recipe.steps.push({
       type: "text",
-      value: text
+      contents: text
     });
   });
 
@@ -75,7 +75,7 @@ function extractIngredients(node) {
 function parseIngredient(ingredient) {
   // prettier-ignore
   const units = [
-    "ball", "balls", "cloves", "cup", "g", "gram", "grams", "l", "ml", "oz",
+    "ball", "balls", "cup", "cups", "g", "gram", "grams", "l", "ml", "oz",
     "tbsp", "tsp"
   ];
 

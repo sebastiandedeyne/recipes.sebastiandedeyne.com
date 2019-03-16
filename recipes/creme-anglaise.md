@@ -15,3 +15,5 @@ Combine half of the cream mixture with the eggs and sugar blend. Slowly whisk to
 
 Let thicken over low heat (max. 85°C). It’s finished when your finger leaves a path on the back of your spoon.
 Strain into bowl. Cover and chill.
+
+#dessert

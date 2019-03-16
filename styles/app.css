@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 body {
   color: #222;
   font-family: "PT Serif";
@@ -63,10 +67,10 @@ body {
   opacity: 0.15;
 }
 
-.recipe h1:not(:last-child),
-.recipe ul:not(:last-child),
-.recipe p:not(:last-child) {
-  margin-bottom: 0.5rem;
+.recipe h1,
+.recipe p,
+.recipe ul {
+  margin-bottom: 0.6rem;
 }
 
 .recipe h1 {
@@ -79,6 +83,7 @@ ul {
   display: grid;
   font-weight: bold;
   grid-column-gap: 0.3em;
+  grid-row-gap: 0.15em;
   grid-template-columns: min-content auto;
   list-style: none;
   margin-left: 0.5rem;
@@ -93,14 +98,6 @@ li {
   text-align: right;
 }
 
-.ingredient-amount:empty {
-  display: none;
-}
-
-.ingredient-amount:empty + .ingredient-name {
-  grid-column: 1 / -1;
-}
-
 .source {
   font-style: italic;
 }
@@ -109,8 +106,8 @@ li {
   appearance: none;
   -webkit-appearance: none;
   border: none;
+  font: inherit;
   font-size: 1rem;
-  font-family: "Menlo", "Monaco", "Consolas", monospace;
   padding: 1rem;
   width: 100%;
   display: block;

@@ -5,31 +5,40 @@ export default function Recipe({ name, steps, source }) {
       <ol>
         {steps.map((step, i) => (
           <li key={i}>
-            <Step {...step} />
+            {step.type === "ingredients" ? (
+              <ul>
+                {step.contents.map((ingredient, i) => (
+                  <li key={i}>
+                    <span className="ingredient-amount">
+                      {ingredient.amount}
+                    </span>
+                    <span className="ingredient-name">{ingredient.name}</span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>{step.contents}</p>
+            )}
           </li>
         ))}
       </ol>
-      {source && <p className="source">From {source}</p>}
+      {source ? <Source source={source} /> : null}
     </article>
   );
 }
 
-function Step({ type, value }) {
-  switch (type) {
-    case "ingredients":
-      return (
-        <ul>
-          {value.map((ingredient, i) => (
-            <li key={i}>
-              <span className="ingredient-amount">{ingredient.amount}</span>
-              <span className="ingredient-name">{ingredient.name}</span>
-            </li>
-          ))}
-        </ul>
-      );
-    case "text":
-      return <p>{value}</p>;
-    case "source":
-      return <p className="source">{value}</p>;
+function Source({ source }) {
+  let sourceDomain = "";
+
+  if (source.startsWith("https://")) {
+    sourceDomain = source
+      .substr("https://".length, source.length)
+      .split("/")[0];
   }
+
+  return (
+    <p className="source">
+      From {sourceDomain ? <a href={source}>{sourceDomain}</a> : source}
+    </p>
+  );
 }

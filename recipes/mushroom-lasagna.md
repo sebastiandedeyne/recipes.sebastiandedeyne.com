@@ -23,3 +23,5 @@ Make a bechamel sace & mix in the tomato paste. Add salt & pepper.
 - 150g grated emmental
 
 Layer the lasagna. Every layer should contain mushrooms & bechamel. Use the minced mushrooms for the bottom layer, and add mozarella to the last layer.
+
+#mains
