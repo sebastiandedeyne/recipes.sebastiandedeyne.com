@@ -4,6 +4,10 @@ export default function Filter({ value, onChange }) {
   const filterEl = useRef(null);
 
   function handleKeyDown(e) {
+    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
+      return;
+    }
+
     filterEl.current.focus();
   }
 

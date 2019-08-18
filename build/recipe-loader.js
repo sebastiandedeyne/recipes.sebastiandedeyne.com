@@ -77,7 +77,7 @@ function parseIngredient(ingredient) {
   // prettier-ignore
   const units = [
     "ball", "balls", "can", "cans", "cup", "cups", "g", "gram", "grams", "l",
-    "ml", "oz", "tbsp", "tsp"
+    "ml", "oz", "stick", "tbsp", "tsp"
   ];
 
   const parts = ingredient.split(
