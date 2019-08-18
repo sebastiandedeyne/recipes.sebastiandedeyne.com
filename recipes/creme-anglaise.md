@@ -1,7 +1,7 @@
 # Creme Anglaise
 
 - 500 ml heavy cream
-- 500 ml whole milk
+- 250 ml whole milk
 - 1 vanilla bean
 
 Combine milk and heavy cream. Scrape in seeds from vanilla bean. Bring to simmer and remove from heat.
