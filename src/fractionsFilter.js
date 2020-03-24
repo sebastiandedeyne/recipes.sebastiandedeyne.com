@@ -1,5 +1,9 @@
 module.exports = function fractionsFilter(string) {
-  return String(string)
+  if (!string) {
+    return "";
+  }
+
+  return string
     .replace("1/2", "½")
     .replace("1/3", "⅓")
     .replace("2/3", "⅔")
