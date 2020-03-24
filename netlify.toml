@@ -1,3 +1,6 @@
 [build]
 command = "yarn build"
 publish = "public"
+
+[environment]
+NODE_VERSION = 13
