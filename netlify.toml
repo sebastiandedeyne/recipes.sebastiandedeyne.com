@@ -3,4 +3,4 @@ command = "yarn build"
 publish = "public"
 
 [context.production]
-environment = { NODE_VERSION = 13 }
+environment = { NODE_VERSION = "13" }
