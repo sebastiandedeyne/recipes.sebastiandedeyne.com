@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700">
+  </head>
+  <body>
+    <input class="filter" type="search" placeholder="Search...">
+    <main class="wrapper masonry">
+      {% for recipe in recipes %}
+        <article class="recipe" data-search-string="{{ recipe.searchString }}">
+          <h1>{{ recipe.name }}</h1>
+          <ol>
+            {% for step in recipe.steps %}
+              <li>
+                {% if step.type == "ingredients" %}
+                  <ul>
+                    {% for ingredient in step.contents %}
+                      <li>
+                        <span class="ingredient-amount">
+                          {{ ingredient.amount | fractions }}
+                        </span>
+                        <span class="ingredient-name">
+                          {{ ingredient.name }}
+                        </span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p>{{ step.contents }}</p>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ol>
+        </article>
+      {% endfor %}
+    </main>
+    <script>
+      window.addEventListener("keydown", (event) => {
+        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+          return;
+        }
+
+        document.querySelector('.filter').focus();
+      });
+
+      document.querySelector('.filter').addEventListener('input', (event) => {
+        Array.from(document.querySelectorAll('.recipe')).forEach(recipe => {
+          if (!event.target.value) {
+            recipe.classList.remove('hidden');
+            return;
+          }
+
+          if (recipeset.searchString.indexOf(event.target.value.toLowerCase()) > -1) {
+            recipe.classList.remove('hidden');
+          } else {
+            recipe.classList.add('hidden');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

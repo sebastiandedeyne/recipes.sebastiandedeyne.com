@@ -63,10 +63,6 @@ body {
   transition: opacity 0.3s ease-out;
 }
 
-.recipe.is-blurred {
-  opacity: 0.15;
-}
-
 .recipe h1,
 .recipe p,
 .recipe ul {
@@ -77,6 +73,10 @@ body {
   font-size: inherit;
   text-transform: uppercase;
   letter-spacing: 0.075em;
+}
+
+.recipe h1 a {
+  text-decoration: none;
 }
 
 ul {

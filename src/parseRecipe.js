@@ -1,17 +1,17 @@
 const _ = require("lodash");
 const markdown = require("remark-parse");
 
-function parseRecipe(text) {
+module.exports = function recipeFilter(text) {
   const parser = new markdown.Parser(null, text);
 
   const recipe = {
     name: "",
     steps: [],
     tags: [],
-    source: null
+    source: null,
   };
 
-  parser.parse().children.forEach(node => {
+  parser.parse().children.forEach((node) => {
     if (node.type === "heading") {
       recipe.name = extractText(node);
 
@@ -21,7 +21,7 @@ function parseRecipe(text) {
     if (node.type === "list") {
       recipe.steps.push({
         type: "ingredients",
-        contents: extractIngredients(node)
+        contents: extractIngredients(node),
       });
 
       return;
@@ -38,8 +38,8 @@ function parseRecipe(text) {
     if (text.startsWith("#")) {
       text
         .split(" ")
-        .map(tag => tag.substr(1))
-        .forEach(tag => {
+        .map((tag) => tag.substr(1))
+        .forEach((tag) => {
           recipe.tags.push(tag);
         });
 
@@ -48,7 +48,7 @@ function parseRecipe(text) {
 
     recipe.steps.push({
       type: "text",
-      contents: text
+      contents: text,
     });
   });
 
@@ -57,7 +57,7 @@ function parseRecipe(text) {
     .toLowerCase();
 
   return recipe;
-}
+};
 
 function extractText(node) {
   if (!node.children) {
@@ -88,9 +88,3 @@ function parseIngredient(ingredient) {
     ? { amount: null, name: parts[0] }
     : { amount: parts[1], name: parts[4] };
 }
-
-function recipeLoader(source) {
-  return `export default ${JSON.stringify(parseRecipe(source))}`;
-}
-
-module.exports = recipeLoader;
