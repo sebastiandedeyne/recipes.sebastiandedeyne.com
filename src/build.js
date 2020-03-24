@@ -8,27 +8,33 @@ const fractionsFilter = require("./fractionsFilter");
 const readDir = util.promisify(fs.readdir);
 const readFile = util.promisify(fs.readFile);
 
-readDir(`${__dirname}/../recipes`)
-  .then((filenames) => {
-    return Promise.all(
-      filenames.map((filename) => {
-        return readFile(`${__dirname}/../recipes/${filename}`, {
-          encoding: "utf-8",
-        }).then(parseRecipe);
-      })
-    );
-  })
-  .then((recipes) => {
-    const html = minify(renderRecipes(recipes), {
-      collapseWhitespace: true,
-      removeAttributeQuotes: true,
-    });
+getRecipes().then(renderRecipes).then(minifyHtml).then(writeHtml);
 
-    fs.writeFileSync(`${__dirname}/../public/index.html`, html);
+async function getRecipes() {
+  const filenames = await readDir(`${__dirname}/../recipes`);
+
+  const recipes = filenames.map((filename) => {
+    return readFile(`${__dirname}/../recipes/${filename}`, {
+      encoding: "utf-8",
+    }).then(parseRecipe);
   });
+
+  return await Promise.all(recipes);
+}
 
 function renderRecipes(recipes) {
   return new nunjucks.Environment()
     .addFilter("fractions", fractionsFilter)
     .render(`${__dirname}/../views/index.njk`, { recipes });
+}
+
+function minifyHtml(html) {
+  return minify(html, {
+    collapseWhitespace: true,
+    removeAttributeQuotes: true,
+  });
+}
+
+function writeHtml(html) {
+  fs.writeFileSync(`${__dirname}/../public/index.html`, html);
 }
