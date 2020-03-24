@@ -54,7 +54,7 @@
             return;
           }
 
-          if (recipeset.searchString.indexOf(event.target.value.toLowerCase()) > -1) {
+          if (recipe.dataset.searchString.indexOf(event.target.value.toLowerCase()) > -1) {
             recipe.classList.remove('hidden');
           } else {
             recipe.classList.add('hidden');
