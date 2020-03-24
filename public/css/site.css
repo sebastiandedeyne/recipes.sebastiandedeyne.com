@@ -124,3 +124,7 @@ li {
 .filter:focus {
   outline: none;
 }
+
+.hidden {
+  display: none !important;
+}
