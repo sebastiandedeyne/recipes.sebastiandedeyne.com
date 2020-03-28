@@ -10,7 +10,7 @@ Boil for 25 minutes.
 
 Boil according to package.
 
-- 25 pumpkin seeds
+- 25 g pumpkin seeds
 
 Dry roast in a pan on a high temperature. They’re finished when they start to pop.
 
