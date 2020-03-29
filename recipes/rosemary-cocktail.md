@@ -13,6 +13,6 @@ For the cocktail:
 - 1 1/2 oz gin
 - 3/4 oz rosemary syrup
 - 3/4 oz lime juice
-- Spuitwater
+- Top with club soda
 
 #cocktails
