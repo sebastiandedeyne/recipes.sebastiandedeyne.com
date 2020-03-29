@@ -1,4 +1,4 @@
-# Blood orange gin cocktail
+# Bloodflower
 
 - 1 1/2 oz gin
 - 1/2 oz lemon juice
