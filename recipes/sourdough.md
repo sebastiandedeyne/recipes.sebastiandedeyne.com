@@ -1,9 +1,9 @@
 # Sourdough
 
 - 50g active starter
-- 350g water (32° C)
-- 500g all pourpose flour
-- 9g salt
+- 375-425 g water (32° C)
+- 500g flour
+- 12g salt
 
 Dissolve starter in the water. Add flour and salt, mix to combine and let sit for 30 minutes.
 
