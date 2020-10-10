@@ -2,9 +2,9 @@
 
 - Potatoes
 
-Slice the potatoes into 1/4" discs. Cook them until they're almost-soft.
+Slice the potatoes into 1/4 inch discs. Cook them until they're almost-soft.
 
-- 300g chicken breast
+- 300 g chicken breast
 
 Dice into small cubes and sauté in a frying pan. Set aside.
 
@@ -13,15 +13,15 @@ Dice into small cubes and sauté in a frying pan. Set aside.
 
 Thinly slice the shallot. Cut the poblano into thin, 1 inch long strips. Sauté together in frying a pan until everything's almost becoming soft.
 
-- 250g cherry tomatoes
+- 250 g cherry tomatoes
 
 Cut the cherry tomatoes in 2, add them to the pan.
 
-- 250g cream cheese with herbs
+- 250 g Boursin
 
 Mix in the cream cheese and chicken.
 
-- 150g grated emmental
+- 150 g grated emmental
 
 Place everything into a baking dish, top with potatoes and emmental.
 
