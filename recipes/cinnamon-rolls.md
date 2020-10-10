@@ -14,12 +14,13 @@ Combine and set aside for 5 minutes.
 
 Combine all fluid ingredients with the yeast mixture. Stir into the flour and knead for 4 minutes until smooth.
 
-Set aside and let rise for 60 minutes.
+Shape into a ball and set aside to let rise for 60 minutes.
 
 Punch down the dough and roll out on a floured surface into a 20x14 inch rectangle.
 
 - 1/2 cup brown sugar
 - 1 1/2 tbsp cinnamon
+- 150 g butter
 
 Combine and spread over the dough. Roll tightly into a log and slice into 12 rolls.
 
