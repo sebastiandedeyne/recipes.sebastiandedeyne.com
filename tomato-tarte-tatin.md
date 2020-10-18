@@ -1,6 +1,6 @@
 # Tomato tarte tatin
 
-- 2 cloves garlic, mashed
+- 2 cloves garlic, minced
 - 3 tbsp passata
 - 2 tbsp balsamic vinegar
 - 1 tbsp brown sugar
