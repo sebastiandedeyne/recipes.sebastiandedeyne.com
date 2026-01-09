@@ -81,7 +81,7 @@ function parseIngredient(ingredient) {
   ];
 
   const parts = ingredient.split(
-    new RegExp(`^([0-9.,-/+\\s]+(${units.join("|")})?)(\\s+)`)
+    new RegExp(`^([0-9.,-/+\\s]+(${units.join("|")})?)(\\s+)`),
   );
 
   return parts.length === 1
